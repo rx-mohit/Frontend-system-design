@@ -18,10 +18,13 @@
         const response = await fetch(`/getData?lastData=${lastData}`);
         const result = await response.json();
         document.getElementById('data-container').innerHTML = result.data;
-        getData(result.data);
+        // getData(result.data);
       } catch(e) {
         console.log(e);
         // please handle error scenario
+        // getData(result.data);
+      }finally{
+        getData(result.data);
       }
     }
 
